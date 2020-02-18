@@ -7,13 +7,13 @@ http://blog.rogach.org/2015/08/how-to-create-your-own-simple-3d-render.html
 # How to run ?
 To run the programm you need at least fresh (elective) JRE.
 
-**Linux: **
+**Linux:**
 
 type in console:
 
 ```
 java -jar Render3D.jar 
 ```
-**Linux: **
+**Linux:**
 
 I guess double click on the file will works fine
