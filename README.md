@@ -14,6 +14,6 @@ type in console:
 ```
 java -jar Render3D.jar 
 ```
-**Linux:**
+**Windows:**
 
 I guess double click on the file will works fine
