@@ -63,7 +63,7 @@ public class Render3D {
 
 				List<Triangle> tris = new ArrayList<>();
 
-				if(Pyramid) {
+				if(!Cube) {
 					tris.add(new Triangle(new Vertex(size, size, size),
 							new Vertex(-size, -size, size),
 							new Vertex(-size, size, -size),
