@@ -44,7 +44,7 @@ public class Render3D {
 	private static JTextField textFigureColor;
 	
 	public static void main(String... args) {
-
+		
 		JFrame frame = new JFrame();
 		Container pane = frame.getContentPane();
 		pane.setLayout(new BorderLayout());
@@ -56,6 +56,7 @@ public class Render3D {
 		pane.add(verticalSlider, BorderLayout.EAST);
 
 		JPanel renderPanel = new JPanel() {
+
 			public void paintComponent(Graphics g) {
 				Graphics2D g2 = (Graphics2D) g;
 				g2.setColor(Color.GRAY);
@@ -189,6 +190,7 @@ public class Render3D {
 					    path.lineTo(v3.x, v3.y);
 					    path.closePath();
 					    g2.draw(path);
+					    
 					} else {
 						
 	                    Vertex ab = new Vertex(v2.x - v1.x, v2.y - v1.y, v2.z - v1.z);
@@ -238,9 +240,8 @@ public class Render3D {
 							}
 						}
 					}
-				}
-				
-				//System.out.println(size);
+				}	
+								
 				g2.drawImage(img, 0, 0, null);
 
 			}
@@ -266,12 +267,10 @@ public class Render3D {
 		frame.setLocationRelativeTo(null);
 		frame.addMouseWheelListener(mwl);
 		
-		//Render3D obj = new Render3D(frame);
-		
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		
-		JMenu Menu = new JMenu("New menu");
+		JMenu Menu = new JMenu("Menu");
 		menuBar.add(Menu);
 		
 		JMenu menuInfo = new JMenu("Info");
