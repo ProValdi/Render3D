@@ -173,7 +173,6 @@ public class Render3D {
 
 				double[] zBuffer = new double[img.getWidth() * img.getHeight()];
 
-				// initialize array with extremely far away depths
 				for (int q = 0; q < zBuffer.length; q++) {
 				    zBuffer[q] = Double.NEGATIVE_INFINITY;
 				}
@@ -206,7 +205,6 @@ public class Render3D {
 	
 	                    double angleCos = Math.abs(norm.z);
 						
-						// since we are not using Graphics2D anymore, we have to do translation manually
 						v1.x += getWidth() / 2;
 						v1.y += getHeight() / 2;
 						v2.x += getWidth() / 2;
@@ -214,7 +212,6 @@ public class Render3D {
 						v3.x += getWidth() / 2;
 						v3.y += getHeight() / 2;
 	
-						// compute rectangular bounds for triangle
 						int minX = (int) Math.max(0, Math.ceil(Math.min(v1.x, Math.min(v2.x, v3.x))));
 						int maxX = (int) Math.min(img.getWidth() - 1, Math.floor(Math.max(v1.x, Math.max(v2.x, v3.x))));
 						int minY = (int) Math.max(0, Math.ceil(Math.min(v1.y, Math.min(v2.y, v3.y))));
