@@ -233,8 +233,6 @@ public class Render {
                                     double depth = b1 * v1.z + b2 * v2.z + b3 * v3.z;
                                     int zIndex = y * img.getWidth() + x;
                                     if (zBuffer[zIndex] < depth) {
-
-                                        System.out.println("kke");
                                         if(!switchShades) {
                                             img.setRGB(x, y, getShade(t.color, angleCos).getRGB());
                                         } else {
