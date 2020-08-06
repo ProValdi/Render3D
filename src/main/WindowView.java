@@ -53,7 +53,8 @@ public class WindowView extends JFrame {
 
         textFigureColor = new JTextField();
         textFigureColor.addActionListener(actionEvent -> {
-            scene.getShape().setColor(viewModel.changeColor(textFigureColor.getText().toUpperCase()));
+            Color color = viewModel.changeColor(textFigureColor.getText().toUpperCase());
+            scene.getShape().setColor(color == null ? scene.getShape().getColor() : color);
             scene.repaint();
         });
         textFigureColor.setText("white");
@@ -65,7 +66,8 @@ public class WindowView extends JFrame {
 
         textSkeletonColor = new JTextField();
         textSkeletonColor.addActionListener(actionEvent -> {
-            scene.getShape().setSkeletonColor(viewModel.changeColor(textSkeletonColor.getText().toUpperCase()));
+            Color color = viewModel.changeColor(textSkeletonColor.getText().toUpperCase());
+            scene.getShape().setSkeletonColor(color == null ? scene.getShape().getSkeletonColor() : color);
             scene.repaint();
         });
         textSkeletonColor.setText("white");
